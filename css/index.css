@@ -317,7 +317,7 @@ img{ /*normalizar img*/
     /*MAIN (hero)*/
 
     .hero{
-        background-image: url(/img/General/banner.jpg);
+        background-image: url(./img/General/banner.jpg);
         padding: 5rem 0 5rem 0;
         background-size: cover;
         position: relative;
