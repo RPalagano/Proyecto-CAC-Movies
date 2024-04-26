@@ -1,0 +1,481 @@
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #20141c;
+    color: #ffffff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    font-weight: 600;
+
+}
+
+a{
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+ul, ol, li{
+    list-style-type: none;
+}
+
+
+img{ /*normalizar img*/
+    width: 100%; /*siempre va a tener el 100% del ancho de su contenedor padre (.navbar__logo)*/
+}
+
+
+.container{
+    max-width: 310px;
+    margin: auto; /*el bloque se centra*/
+}
+
+
+/* HEADER*/
+
+.navbar__fondo{
+    background-color: #a03444;
+    padding: 1rem 0;
+}
+
+.navbar{
+    display: flex; /*para que se comporten de forma flexible (se pongan uno al lado del otro)*/
+    justify-content: space-between;  /*acomoda uno en una punta y el otro en la otra*/
+    align-items: center; /*lo centra verticalmente*/
+}
+
+.navbar__logo{
+    max-width: 20px; /*maximo 15px de ancho*/
+
+}
+
+.navbar__inicio{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu{
+    opacity: 0;
+    visibility: hidden;
+    
+    top: 0rem;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color:#a03444;
+    padding: 1rem;
+}
+
+.navbar__item_abrir, .navbar__item_cerrar{
+    display: flex;
+    align-items: center;
+    background-color: #a03444; 
+    border: none;
+    max-width: 30px;
+}
+
+.navbar__menu.visible{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.navbar__submenu_oculto{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.navbar__menu_boton{
+    background-color: #20141c;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-radius: 0.2rem;
+}
+
+/*MAIN*/
+
+/*Hero*/
+
+.hero{
+    background-image: url(/img/General/banner2.jpg);
+    padding: 5rem 0 5rem 0;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before{ /*Si lo pongo en el hero me nubla todo, asi toma solo la imagen de fondo */
+    content: ""; /*siempre tiene que tener un contenido pero como no lo necesitamos lo dejamos vacio*/
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute; /*before tiene un posicionamiento estatico y se ubica atrás de la imagen para que se vea necesitamos poner un position*/
+    opacity: 0.7;
+
+}
+
+.hero__content{
+    color: aliceblue;
+    position: relative; /*Para que no tome la opacidad los elementos*/
+}
+
+.hero__banner{
+    display: grid;
+    max-width: 1100PX; 
+    margin: auto; /*el bloque se centra*/
+    text-align: center;
+    gap: 2rem;
+
+}
+
+.hero__banner_titulo{
+    font-size: 2.5rem;
+}
+
+.hero__banner_texto{
+    font-size: 1.6rem;
+}
+
+.hero__banner_borde{
+    background-color: #a03444;
+    padding: 0.6rem 0rem 0.6rem 0rem;
+    border-radius: 0.2rem;
+    margin: 0 35%  0 35%;
+    font-size: 1rem;
+}
+
+/*SECCION 1*/
+
+.principal__buscar, .principal__aclamadas, .principal__tendencias{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.principal__buscar{
+    display: grid;
+    padding: 1rem 0rem 1rem 0rem;
+    gap: 1rem;
+}
+
+.principal__buscar_texto{
+    outline: 0; /* Para sacar el borde del selecionado*/
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+.principal__buscar_barra{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-left: 5%;
+    margin-right: 10%;
+    gap: 0.5rem;
+   
+}
+
+.principal__buscar_boton{
+    width: 4rem;
+    background-color: #a03444;  
+    border-radius: 1.5rem;
+    border: solid aliceblue;
+    border-width: 0.15rem;
+    font-size: 1rem; 
+}
+
+
+/*BARRA*/
+
+.principal__barra{
+    padding: 0.1rem;
+    background-color: #a03444;  
+}
+
+
+/*TENDENCIAS*/
+
+.principal__tendencias{
+    padding-top: 1rem;
+}
+
+.principal__tendencias_peliculas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.principal__tendencias_peliculas_card{
+    margin: 1rem;  
+}
+
+.principal__tendencias_peliculas_img, .principal__aclamadas_peliculas_img{
+    border-radius: 1rem;
+}
+
+.principal__tendencias_peliculas_boton{
+    background-color: #a03444;  
+    padding:  0.5rem 1rem;
+    border-radius: 1rem;
+    border: solid rgb(255, 255, 255);
+    border-width: 0.18rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.principal__tendencias_peliculas_paginas{
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+
+/*ACLAMADAS*/
+
+.principal__aclamadas{
+    padding: 1rem 0;
+}
+
+.principal__aclamadas_peliculas{
+    display: flex;
+    padding-top: 1rem;
+    gap: 0.5rem;
+}
+
+
+/*FOOTER*/
+
+.footer__fondo{
+    background-color: #a03444;
+    padding: 1rem 0;
+}
+
+.footer_nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.footer__boton{
+    background-color: #20141c;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.3rem;
+}
+
+
+.footer_nav{
+    display: grid;
+    grid-template-columns: 25% 25% 15% 33%;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 750px){
+
+    /*GENERAL*/
+
+    .container{
+        max-width: 750PX;     
+    }
+
+    /* HEADER*/
+
+    .navbar__item_abrir, .navbar__item_cerrar{
+        display: none;
+        
+    }
+
+    .navbar__menu{
+        opacity: 1;
+        visibility: visible;
+        position: inherit;
+        padding: 0;
+    }
+
+    .navbar__submenu_oculto{
+        padding-top: 0rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navbar__menu_boton{
+        background-color: #20141c;
+        padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+        border-radius: 0.2rem;
+    }
+
+    /*MAIN (hero)*/
+
+    .hero{
+        background-image: url(/img/General/banner.jpg);
+        padding: 5rem 0 5rem 0;
+        background-size: cover;
+        position: relative;
+    }
+
+    .hero__banner_borde{
+        background-color: #a03444;
+        padding: 0.6rem 0rem 0.6rem 0rem;
+        border-radius: 0.2rem;
+        margin: 0 43%  0 43%;
+        font-size: 1rem;
+    }
+
+    /*SECCION 1*/
+
+    .principal__buscar{
+        padding: 1.5rem 0rem 1.5rem 0rem;
+        gap: 1.5rem;
+    }
+    
+    .principal__buscar_texto{
+        border-radius: 1.5rem;
+        border: none;
+        padding: 0 1rem;
+    }
+    
+    .principal__buscar_barra{
+        margin-left: 30%;
+        margin-right: 30%;
+        gap: 0.5rem;
+       
+    }
+
+    .principal__tendencias_peliculas{
+        grid-template-columns: 25% 25% 25% 25%;
+        padding-top: 1rem;
+    }
+
+
+}
+
+@media screen and (min-width: 1400px){
+
+    /*GENERAL*/
+
+    html{
+        font-size: large;  
+    }
+
+    .container{
+        max-width: 1300px;
+    }
+   
+     /*MAIN (hero)*/
+
+    .hero{
+        padding: 10rem 0 10rem 0;
+    }
+
+    .hero__banner{
+        gap: 3rem;
+    }
+
+    .hero__banner_titulo{
+        font-size: 4rem;
+    }
+
+    .hero__banner_texto{
+        font-size: 2rem;
+    }
+
+    .hero__banner_borde{
+        padding: 0.8rem 0rem 0.8rem 0rem;
+        margin: 0 43%  0 43%;
+    }
+
+    /*SECCION 1*/
+
+    .principal__buscar, .principal__aclamadas, .principal__tendencias{
+        font-size: 1.5rem;
+
+    }
+    
+    .principal__buscar{
+        padding: 5rem 0rem 5rem 0rem;
+        gap: 2.5rem;
+    }
+    
+    .principal__buscar_texto{
+        padding: 0.2rem 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .principal__buscar_barra{
+        grid-template-columns: 80% 20%;
+        gap: 0.5rem;
+    }
+    
+    .principal__buscar_boton{
+        width: 6rem; 
+        font-size: 1.5rem; 
+    }
+
+    /*TENDENCIAS*/
+
+    .principal__tendencias{
+        padding-top: 3rem;
+
+    }
+
+    .principal__tendencias_peliculas{
+        padding: 2rem;
+    }
+
+    .principal__tendencias_peliculas_card{
+        margin: 0 2rem;   
+    }
+
+    .principal__tendencias_peliculas_boton{ 
+        font-size: 1.4rem;
+        margin: 4rem;
+    }
+
+    .principal__tendencias_peliculas_paginas{
+        margin-top: 1.5rem;
+        padding-bottom: 4rem;
+    }
+
+    /*ACLAMADAS*/
+
+    .principal__aclamadas{
+        padding: 4rem 0;
+    }
+
+    .principal__aclamadas_peliculas{
+        padding-top: 2rem;
+        gap: 3rem;
+    }
+
+
+    /*FOOTER*/
+
+    .footer__fondo{
+        background-color: #a03444;
+        padding: 1rem 0;
+    }
+
+    .footer_nav{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .footer__boton{
+        background-color: #20141c;
+        padding: 1rem;
+        border-radius: 0.3rem;
+    }
+}

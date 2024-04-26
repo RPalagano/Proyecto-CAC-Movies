@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC-Movies</title>
+    <link rel="icon"  href="img/General/logo.png">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <header class="navbar__fondo"> <!-- Inicio Header -->
+
+        <nav class="navbar container"> 
+            <picture>
+                <a href="index.html" class="navbar__inicio">
+                <img class="navbar__logo" id="logo" src="/img/General/logo.png" alt="Logo">CAC-Movies
+                </a>
+            </picture>
+
+            <button class="navbar__item_abrir" id="abrir"><img src="/img/General/menu_abrir.png" alt="Logo para abrir el menu"></button>
+
+            <section class="navbar__menu hidden" id="menu">
+                <button class="navbar__item_cerrar" id="cerrar"><img src="/img/General/menu_cerrar.png" alt="Logo para cerrar el menu"></button>
+                <ul class="navbar__submenu_oculto">
+                    <li>
+                        <a href="">Tendencias</a>
+                    </li>
+
+                    <li>
+                        <a href="">Registrarse</a>
+                    </li>
+
+                    <li class="navbar__menu_boton">
+                        <a href="">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+
+    </header> <!-- Fin Header -->
+
+    <main> <!-- Inicio Main -->
+
+        <article class="hero">  <!-- Inicio Banner --> 
+            <section  class="hero__content">
+                <section  class="hero__banner"> 
+                    <h1 class="hero__banner_titulo">Películas y series ilimitadas en un solo lugar</h1>
+                    <h2 class="hero__banner_texto">Disfruta donde quieras. Cancela cuando quieras.</h2>
+                    <h6 class="hero__banner_borde">
+                        <a href="">Registrate</a>
+                    </h6>   
+                </section> 
+            </section>
+        </article> <!-- Fin Banner -->
+
+        <div class="container">
+
+            <section class="principal__buscar"> <!-- Inicio Seccion 1 -->
+                <h2>¿Qué estás buscando para ver?</h2>
+                <div class="principal__buscar_barra">
+                    <input class="principal__buscar_texto" type="text">
+                    <h6 class="principal__buscar_boton">Buscar</h6>
+                </div>
+            </section> <!-- Fin Seccion 1 -->
+            
+            <div class="principal__barra"></div>
+
+            <article class="principal__tendencias"> <!-- Inicio Article -->
+                <h2>Las tendencias de hoy</h2>
+                
+                <section class="principal__tendencias_peliculas">
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_1.jpg" alt="Poster de la película The Beekeeper">
+                        <h6>The Beekeeper</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_2.jpg" alt="Poster de la película Badland Hunters">
+                        <h6>Badland Hunters</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_3.jpg" alt="Poster de la película The Marvels">
+                        <h6>The Marvels</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_4.jpg" alt="Poster de la película Wonka">
+                        <h6>Wonka</h6>
+                    </div>
+                </section>
+    
+                <section class="principal__tendencias_peliculas">
+                    <div class="principal__tendencias_peliculas_card"> 
+                        <img class="principal__tendencias_peliculas_img"src="/img/Tendencias/peli_5.jpg" alt="Poster de la película Aquaman and the Lost Kingdom">
+                        <h6>Aquaman and the Lost Kingdom</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_6.jpg" alt="Poster de la película Migration">
+                        <h6>Migration</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_7.jpg" alt="Poster de la película Sixty Minutes">
+                        <h6>Sixty Minutes</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_8.jpg" alt="Poster de la película Wish">
+                        <h6>Wish</h6>
+                    </div>
+                </section>
+    
+                <section class="principal__tendencias_peliculas">
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_9.jpg" alt="Poster de la película The Masked Saint">
+                        <h6>The Masked Saint</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_10.jpg" alt="Poster de la película Due Justice">
+                        <h6>Due Justice</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_11.jpg" alt="Poster de la película Orion and the Dark">
+                        <h6>Orion and the Dark</h6>
+                    </div>
+                    <div class="principal__tendencias_peliculas_card">
+                        <img class="principal__tendencias_peliculas_img" src="/img/Tendencias/peli_12.jpg" alt="Poster de la película Genghis Khan">
+                        <h6>Genghis Khan</h6>
+                    </div>
+                </section>
+      
+                <div class="principal__tendencias_peliculas_paginas">
+                    <bottom class="principal__tendencias_peliculas_boton">Anterior</bottom>
+                    <bottom class="principal__tendencias_peliculas_boton">Siguiente</bottom>
+                </div>
+                
+            </article> <!-- Fin Article -->
+    
+            <div class="principal__barra"></div>
+    
+            <section class="principal__aclamadas"> <!-- Inicio Seccion 2 -->
+                <h2>Las más aclamadas</h2>
+                
+               <section class="principal__aclamadas_peliculas">
+                    <div class="principal__aclamadas_peliculas_card">
+                        <img class="principal__aclamadas_peliculas_img" src="/img/Aclamadas/aclamada_1.jpg" alt="Poster de la película The Beekeeper">
+                    </div>
+                    <div class="principal__aclamadas_peliculas_card">
+                        <img class="principal__aclamadas_peliculas_img" src="/img/Aclamadas/aclamada_2.jpg" alt="Poster de la película The Beekeeper">
+                    </div>
+                    <div class="principal__aclamadas_peliculas_card">
+                        <img class="principal__aclamadas_peliculas_img" src="/img/Aclamadas/aclamada_3.jpg" alt="Poster de la película The Beekeeper">
+                    </div>
+                    <div class="principal__aclamadas_peliculas_card">
+                        <img class="principal__aclamadas_peliculas_img" src="/img/Aclamadas/aclamada_4.jpg" alt="Poster de la película The Beekeeper">
+                    </div>
+                    <div class="principal__aclamadas_peliculas_card">
+                        <img class="principal__aclamadas_peliculas_img" src="/img/Aclamadas/aclamada_5.jpg" alt="Poster de la película The Beekeeper">
+                    </div>
+                    <div class="principal__aclamadas_peliculas_card">
+                        <img class="principal__aclamadas_peliculas_img" src="/img/Aclamadas/aclamada_6.jpg" alt="Poster de la película The Beekeeper">
+                    </div>
+                </section>
+            </section> <!-- Fin Seccion 2 -->
+        </div>
+
+    </main> <!-- Fin Main -->
+
+
+    <footer class="footer__fondo"> <!-- Inicio Footer -->
+        <nav class="footer_nav container">
+            <li>
+                <a href="">Términos y condiciones</a>
+            </li>
+
+            <li>
+                <a href="">Preguntas frecuentes</a>
+            </li>
+
+            <li>
+                <a href="">Ayuda</a>
+            </li>
+
+            <li class="footer__boton">
+                <a href="">Administrador Películas</a>
+            </li>
+        </nav>
+    </footer> <!-- Fin Footer -->
+    <script src="/js/header.js"></script>
+</body>
+</html>
